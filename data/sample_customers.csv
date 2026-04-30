@@ -1,0 +1,11 @@
+customer_id,name,email,last_purchase,amount,category,last_interaction
+201,Aanya Sharma,aanya.sharma@example.com,CRM Software Subscription,25000,SaaS,2026-04-10
+202,Rohit Mehta,rohit.mehta@example.com,Business Analytics Dashboard,47000,Analytics,2026-04-05
+203,Priya Iyer,priya.iyer@example.com,Team Collaboration Suite,18500,Productivity,2026-03-28
+204,Aditya Verma,aditya.verma@example.com,Enterprise Firewall Renewal,92000,Security,2026-04-18
+205,Neha Kapoor,neha.kapoor@example.com,Marketing Automation Add-on,34000,MarTech,2026-04-01
+206,Karan Bhatia,karan.bhatia@example.com,Cloud Storage Expansion,56000,Cloud,2026-03-25
+207,Meera Nair,meera.nair@example.com,HR Payroll Integration,29000,HRTech,2026-04-14
+208,Vikram Singh,vikram.singh@example.com,Customer Support AI Bot,61000,AI,2026-04-08
+209,Isha Desai,isha.desai@example.com,Sales Enablement Toolkit,22000,SalesTech,2026-03-31
+210,ramya,dev.pramya1055@gmail.com,API Management Platform,78000,Developer Tools,2026-04-16

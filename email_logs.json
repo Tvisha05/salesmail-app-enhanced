@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "2026-04-30 09:52:49.683725",
+    "customer_id": "C0011381",
+    "email_type": "re-engagement",
+    "tone": "persuasive",
+    "output": "Hey Customer 0011381,\n\nIt feels like ages since we last saw you! We've been busy curating some seriously stunning new arrivals that we think you'll absolutely love, especially given your impeccable taste in clothing. Remember that incredible piece you snagged from us? We've got even more of that vibe, with fresh collections and must-have styles that are perfect for making a statement.\n\nTo welcome you back and show you how much we value your loyalty, we're thrilled to offer you a special **25% off your next order**, plus **free express shipping**. It's our way of saying thanks for being part of our community and giving you the perfect excuse to refresh your wardrobe with something fabulous.\n\nDon't miss out on these amazing deals and our latest drops! Click here to explore now and claim your exclusive discount before it\u2019s gone: [Link to your website/new arrivals page]"
+  },
+  {
+    "timestamp": "2026-04-30 09:54:54.978418",
+    "customer_id": "C100004",
+    "email_type": "re-engagement",
+    "tone": "persuasive",
+    "output": "It's been a while since we last saw you, Mr. [Customer Name], and we've been thinking of you. We know you appreciate quality and timeless style, and since your last purchase of our premium clothing, we've been hard at work curating even more exceptional pieces that we believe you'll love.\n\nTo welcome you back and show our appreciation for your past loyalty, we're excited to offer you a special 20% discount on your next order. This is our way of saying thank you and making it even easier for you to rediscover the perfect additions to your wardrobe.\n\nDon't miss out on this exclusive opportunity to refresh your style. Click here to explore our latest collection and apply your 20% discount at checkout: [Link to website/collection]. We can't wait to have you back!"
+  },
+  {
+    "timestamp": "2026-04-30 09:54:55.179047",
+    "customer_id": "C0011381",
+    "email_type": "re-engagement",
+    "tone": "persuasive",
+    "output": "Hey Customer 0011381,\n\nIt feels like ages since we last saw you! We've been busy curating some seriously stunning new arrivals that we think you'll absolutely love, especially given your impeccable taste in clothing. Remember that incredible piece you snagged from us? We've got even more of that vibe, with fresh collections and must-have styles that are perfect for making a statement.\n\nTo welcome you back and show you how much we value your loyalty, we're thrilled to offer you a special **25% off your next order**, plus **free express shipping**. It's our way of saying thanks for being part of our community and giving you the perfect excuse to refresh your wardrobe with something fabulous.\n\nDon't miss out on these amazing deals and our latest drops! Click here to explore now and claim your exclusive discount before it\u2019s gone: [Link to your website/new arrivals page]"
+  },
+  {
+    "timestamp": "2026-04-30 09:55:48.622775",
+    "customer_id": "C0011381",
+    "email_type": "follow-up",
+    "tone": "professional",
+    "output": "Dear Customer 0011381,\n\nWe are writing to follow up on your recent purchase of clothing. We trust that your order has met your expectations and that you are satisfied with your selection.\n\nAs a valued customer, we wanted to inform you about new arrivals and exclusive collections that may align with your style preferences. We encourage you to explore our latest offerings on our website at your convenience.\n\nShould you require any assistance or wish to discuss further options, our customer service team is readily available to provide personalized recommendations and support."
+  },
+  {
+    "timestamp": "2026-04-30 10:19:38.461370",
+    "customer_id": "C0011381",
+    "email_type": "re-engagement",
+    "tone": "persuasive",
+    "output": "Hey there, Customer 0011381!\n\nIt\u2019s been a little while since we last saw you, and we\u2019ve missed having you around. Since your last purchase, our collection has blossomed with some incredible new styles and must-have pieces that we think you'll absolutely adore. We know you have an eye for quality, and we've curated some fresh looks we're sure will spark your fashion inspiration.\n\nTo welcome you back and help you refresh your wardrobe, we're thrilled to offer you a special incentive. Enjoy **25% off your next order** plus **free express shipping** \u2013 a little something to show we value your business. It's the perfect opportunity to explore our latest arrivals and rediscover your favorites.\n\nReady to dive back into style? Click here to explore our new arrivals and claim your exclusive discount: [Link to New Arrivals/Discount Page] We can't wait to see what you choose!"
+  }
+]
