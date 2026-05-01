@@ -75,5 +75,26 @@
     "email_type": "upsell",
     "tone": "friendly",
     "output": "Hi Customer 0011381,\n\nGiven your investment of $20,000.00 in Clothing, you're perfectly positioned for our premium tier.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nWould love to hear from you \u2014 reply anytime!\n\nBest regards,\nSalesMail AI Team"
+  },
+  {
+    "timestamp": "2026-05-01 12:31:08.620179",
+    "customer_id": "C0011381",
+    "email_type": "re-engagement",
+    "tone": "persuasive",
+    "output": "Hey [Customer Name],\n\nIt's been a while since we last saw you, and we've missed you! We know you have an eye for style, and we've been busy curating some incredible new arrivals that we think you'll absolutely love. From the latest trends to timeless pieces, our collection has evolved, and we'd be thrilled to show you what's fresh.\n\nTo welcome you back and celebrate your amazing taste, we're offering you an exclusive 25% off your next purchase, plus free shipping. This is our way of saying thank you for being such a valued part of our community. It\u2019s the perfect opportunity to refresh your wardrobe with something special.\n\nDon't let this amazing offer pass you by! Click here to explore our latest collection and use code WELCOMEBACK25 at checkout to claim your discount. We can't wait to see what you pick out!"
+  },
+  {
+    "timestamp": "2026-05-01 12:33:39.694797",
+    "customer_id": "C0011381",
+    "email_type": "upsell",
+    "tone": "persuasive",
+    "output": "Customer 0011381, we noticed you have an incredible eye for style and a passion for quality, as demonstrated by your significant investment in our collection. Given your discerning taste and previous purchase, we believe you'll be absolutely captivated by our exclusive **Haute Couture Collection**. This curated selection features limited-edition pieces crafted from the most luxurious fabrics and designed with avant-garde flair, perfect for elevating your wardrobe to the next level.\n\nImagine turning heads in a bespoke silk gown or making a statement with a meticulously tailored cashmere coat \u2013 these are the pieces that define true fashion artistry. The Haute Couture Collection is more than just clothing; it's an investment in timeless elegance and unparalleled craftsmanship, designed for individuals who appreciate the finer things and aren't afraid to showcase their unique personality.\n\nReady to experience fashion at its absolute peak? Explore the Haute Couture Collection now and discover the pieces that will redefine your style. Click here to view the exclusive designs and secure your next iconic addition: [Link to Haute Couture Collection]"
+  },
+  {
+    "timestamp": "2026-05-01 12:35:15.763705",
+    "customer_id": "C100004",
+    "email_type": "re-engagement",
+    "tone": "professional",
+    "output": "Dear Customer C100004,\n\nWe hope this message finds you well. It has been some time since your last engagement with us, and we wanted to reach out and express our continued appreciation for your past patronage. We value your business and would be delighted to welcome you back.\n\nTo demonstrate our commitment and acknowledge your significant past investment, we are pleased to offer you an exclusive incentive. Please find a special discount code for 20% off your next purchase automatically applied to your account, valid on all clothing items. We have recently updated our collection with new arrivals that we believe you will find appealing.\n\nWe encourage you to revisit our offerings at your convenience. Should you have any questions or require assistance, our customer service team is readily available to ensure a seamless experience. We look forward to the possibility of serving you again.\n\nBest regards,\nSalesMail AI Team"
   }
 ]

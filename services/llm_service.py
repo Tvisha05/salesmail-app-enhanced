@@ -11,6 +11,7 @@ Key behaviours:
 
 import logging
 import os
+import re
 from datetime import date, datetime
 from typing import Any, Dict, Optional, Tuple
 
@@ -167,6 +168,57 @@ def _rule_based_email(customer: dict, email_type: str, tone: str) -> str:
     )
 
 
+def _replace_name_placeholders(email_body: str, customer: dict) -> str:
+    """
+    Replace common name placeholders from LLM output with actual customer name.
+    This prevents drafts like "Hi [Customer Name]" from reaching the UI.
+    """
+    name = str(customer.get("name") or "").strip()
+    if not name:
+        return email_body
+
+    patterns = [
+        r"\[customer\s*name\]",
+        r"\{customer\s*name\}",
+        r"\{\{\s*customer\s*name\s*\}\}",
+        r"\[name\]",
+        r"\{name\}",
+        r"\{\{\s*name\s*\}\}",
+        r"<customer\s*name>",
+    ]
+    result = email_body
+    for pattern in patterns:
+        result = re.sub(pattern, name, result, flags=re.IGNORECASE)
+    return result
+
+
+def _ensure_email_structure(email_body: str, customer: dict) -> str:
+    """
+    Ensure generated emails always have:
+    1) greeting at top
+    2) professional closing at bottom
+    """
+    name = str(customer.get("name") or "Customer").strip() or "Customer"
+    body = (email_body or "").strip()
+    if not body:
+        return f"Hi {name},\n\nBest regards,\nSalesMail AI Team"
+
+    has_greeting = bool(re.match(r"^\s*(hi|hello|dear)\b", body, flags=re.IGNORECASE))
+    has_closing = bool(
+        re.search(
+            r"(best regards|regards|sincerely|thanks|thank you)[,\s]*\n?.*salesmail ai team",
+            body,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+    )
+
+    if not has_greeting:
+        body = f"Hi {name},\n\n{body}"
+    if not has_closing:
+        body = f"{body}\n\nBest regards,\nSalesMail AI Team"
+    return body
+
+
 # ── LLM calls ────────────────────────────────────────────────────────────────
 
 def _llm_email(customer: dict, email_type: str, tone: str) -> str:
@@ -281,6 +333,8 @@ def generate_email(customer_id: Any, email_type: str, tone: str, customer: Optio
         logger.warning(f"LLM failed ({exc}) — using rule-based fallback")
         result = _rule_based_email(customer, email_type, tone)
 
+    result = _replace_name_placeholders(result, customer)
+    result = _ensure_email_structure(result, customer)
     _email_cache[cache_key] = result
     return result
 
