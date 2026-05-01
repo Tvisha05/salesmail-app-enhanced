@@ -96,5 +96,33 @@
     "email_type": "re-engagement",
     "tone": "professional",
     "output": "Dear Customer C100004,\n\nWe hope this message finds you well. It has been some time since your last engagement with us, and we wanted to reach out and express our continued appreciation for your past patronage. We value your business and would be delighted to welcome you back.\n\nTo demonstrate our commitment and acknowledge your significant past investment, we are pleased to offer you an exclusive incentive. Please find a special discount code for 20% off your next purchase automatically applied to your account, valid on all clothing items. We have recently updated our collection with new arrivals that we believe you will find appealing.\n\nWe encourage you to revisit our offerings at your convenience. Should you have any questions or require assistance, our customer service team is readily available to ensure a seamless experience. We look forward to the possibility of serving you again.\n\nBest regards,\nSalesMail AI Team"
+  },
+  {
+    "timestamp": "2026-05-01 14:22:03.267592",
+    "customer_id": "C0011381",
+    "email_type": "re-engagement",
+    "tone": "professional",
+    "output": "Hi Customer 0011381,\n\nWe miss you! It's been a while since your last Clothing purchase.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nPlease let me know if you'd like to schedule a brief call.\n\nBest regards,\nSalesMail AI Team"
+  },
+  {
+    "timestamp": "2026-05-01 14:23:06.245669",
+    "customer_id": "C0011381",
+    "email_type": "thank-you",
+    "tone": "professional",
+    "output": "Hi Customer 0011381,\n\nThank you for being a loyal customer in the Clothing space.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nPlease let me know if you'd like to schedule a brief call.\n\nBest regards,\nSalesMail AI Team"
+  },
+  {
+    "timestamp": "2026-05-01 14:23:15.456733",
+    "customer_id": "C100004",
+    "email_type": "thank-you",
+    "tone": "professional",
+    "output": "Hi Customer C100004,\n\nThank you for being a loyal customer in the Clothing space.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nPlease let me know if you'd like to schedule a brief call.\n\nBest regards,\nSalesMail AI Team"
+  },
+  {
+    "timestamp": "2026-05-01 21:10:08.881242",
+    "customer_id": "C0011381",
+    "email_type": "re-engagement",
+    "tone": "professional",
+    "output": "Hi Customer 0011381,\n\nWe miss you! It's been a while since your last Clothing purchase.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nPlease let me know if you'd like to schedule a brief call.\n\nBest regards,\nSalesMail AI Team"
   }
 ]
