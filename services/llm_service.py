@@ -2,7 +2,7 @@
 llm_service.py — Email generation + Customer summary/strategy.
 
 Key behaviours:
-  - NO tool-calling / MCP for main generation (backend fetches data directly)
+  - Works with customer data provided by API layer (MCP-first fetch in main flow)
   - In-memory cache keyed by (customer_id, email_type, tone)
   - DEMO_MODE=true  → pure rule-based, zero LLM calls
   - LLM failure     → rule-based fallback, app never crashes
@@ -163,8 +163,7 @@ def _rule_based_email(customer: dict, email_type: str, tone: str) -> str:
         f"As one of our valued {cat} customers, we want to make sure you're getting the most "
         f"out of every purchase. Your loyalty means a great deal to us.\n\n"
         f"{closer}\n\n"
-        f"Best regards,\nSalesMail AI Team\n\n"
-        f"[{email_type.title()} | {tone.title()} tone]"
+        f"Best regards,\nSalesMail AI Team"
     )
 
 

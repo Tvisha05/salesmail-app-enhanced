@@ -33,5 +33,47 @@
     "email_type": "re-engagement",
     "tone": "persuasive",
     "output": "Hey there, Customer 0011381!\n\nIt\u2019s been a little while since we last saw you, and we\u2019ve missed having you around. Since your last purchase, our collection has blossomed with some incredible new styles and must-have pieces that we think you'll absolutely adore. We know you have an eye for quality, and we've curated some fresh looks we're sure will spark your fashion inspiration.\n\nTo welcome you back and help you refresh your wardrobe, we're thrilled to offer you a special incentive. Enjoy **25% off your next order** plus **free express shipping** \u2013 a little something to show we value your business. It's the perfect opportunity to explore our latest arrivals and rediscover your favorites.\n\nReady to dive back into style? Click here to explore our new arrivals and claim your exclusive discount: [Link to New Arrivals/Discount Page] We can't wait to see what you choose!"
+  },
+  {
+    "timestamp": "2026-04-30 22:46:01.680537",
+    "customer_id": "C0011381",
+    "email_type": "re-engagement",
+    "tone": "persuasive",
+    "output": "Hi Customer 0011381,\n\nWe miss you! It's been a while since your last Clothing purchase.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nAct now \u2014 this offer is available for a limited time only.\n\nBest regards,\nSalesMail AI Team\n\n[Re-Engagement | Persuasive tone]"
+  },
+  {
+    "timestamp": "2026-04-30 22:47:29.967720",
+    "customer_id": "C0011381",
+    "email_type": "thank-you",
+    "tone": "persuasive",
+    "output": "Hi Customer 0011381,\n\nThank you for being a loyal customer in the Clothing space.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nAct now \u2014 this offer is available for a limited time only.\n\nBest regards,\nSalesMail AI Team\n\n[Thank-You | Persuasive tone]"
+  },
+  {
+    "timestamp": "2026-04-30 22:48:09.757095",
+    "customer_id": "C0011381",
+    "email_type": "thank-you",
+    "tone": "professional",
+    "output": "Hi Customer 0011381,\n\nThank you for being a loyal customer in the Clothing space.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nPlease let me know if you'd like to schedule a brief call.\n\nBest regards,\nSalesMail AI Team\n\n[Thank-You | Professional tone]"
+  },
+  {
+    "timestamp": "2026-04-30 22:50:37.322167",
+    "customer_id": "C0011381",
+    "email_type": "thank-you",
+    "tone": "professional",
+    "output": "Hi Customer 0011381,\n\nThank you for being a loyal customer in the Clothing space.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nPlease let me know if you'd like to schedule a brief call.\n\nBest regards,\nSalesMail AI Team"
+  },
+  {
+    "timestamp": "2026-04-30 23:04:01.053363",
+    "customer_id": "C0011381",
+    "email_type": "cold outreach",
+    "tone": "professional",
+    "output": "Hi Customer 0011381,\n\nWe help Clothing customers like you get more value from every purchase.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nPlease let me know if you'd like to schedule a brief call.\n\nBest regards,\nSalesMail AI Team"
+  },
+  {
+    "timestamp": "2026-04-30 23:17:02.633868",
+    "customer_id": "C0011381",
+    "email_type": "upsell",
+    "tone": "friendly",
+    "output": "Hi Customer 0011381,\n\nGiven your investment of $20,000.00 in Clothing, you're perfectly positioned for our premium tier.\n\nAs one of our valued Clothing customers, we want to make sure you're getting the most out of every purchase. Your loyalty means a great deal to us.\n\nWould love to hear from you \u2014 reply anytime!\n\nBest regards,\nSalesMail AI Team"
   }
 ]

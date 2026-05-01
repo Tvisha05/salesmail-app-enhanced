@@ -151,10 +151,11 @@ Why:
 - Backend endpoint accepts generated drafts and sends via SMTP with TLS.
 - Works with Gmail/Outlook/any SMTP-compatible provider.
 
-### 7) Optional MCP Layer
+### 7) MCP Layer (FastMCP + FastAPI)
 
-- `mcp_server.py` and `mcp_client.py` exist for experimentation.
-- Main email generation flow currently does not require MCP.
+- `mcp_server.py` runs a proper FastMCP server and mounts MCP HTTP transport at `/mcp`.
+- Main API routes use MCP-first customer fetch for generation and summary flows.
+- If MCP server is unavailable, backend falls back to direct Pandas fetch for reliability.
 
 ---
 
@@ -201,7 +202,7 @@ salesmail-app-enhanced/
 │   ├── customer_service.py     # Read/search/filter/segment customers
 │   ├── llm_service.py          # LLM calls, prompting, caching, fallback
 │   ├── logger.py               # Logging generated emails
-│   └── mcp_client.py           # Optional MCP client
+│   └── mcp_client.py           # MCP client used by main API
 │
 ├── data/
 │   ├── customers.csv           # Default dataset
@@ -223,7 +224,7 @@ salesmail-app-enhanced/
     └── dist/
 ```
 
----
+--- erf
 
 ## Setup Requirements
 
@@ -301,6 +302,7 @@ Then edit `.env` and add at least one key (Google or OpenAI).
 | `SMTP_USER` | `you@example.com` | For sending emails | SMTP username |
 | `SMTP_PASS` | `app-password` | For sending emails | SMTP password/app password |
 | `SMTP_FROM` | `you@example.com` | No | From address (defaults to SMTP_USER) |
+| `MCP_BASE_URL` | `http://127.0.0.1:9000` | No | Base URL for MCP server |
 
 Notes:
 
@@ -312,9 +314,16 @@ Notes:
 
 ## Run the App
 
-Use two terminals.
+Use three terminals.
 
-### Terminal A: Start backend
+### Terminal A: Start MCP server (FastMCP host)
+
+```bash
+cd salesmail-app-enhanced
+uvicorn mcp_server:app --reload --port 9000
+```
+
+### Terminal B: Start backend
 
 ```bash
 cd salesmail-app-enhanced
@@ -326,7 +335,7 @@ Check health:
 - [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 - [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-### Terminal B: Start frontend
+### Terminal C: Start frontend
 
 ```bash
 cd salesmail-app-enhanced/web
@@ -385,6 +394,14 @@ Open:
 - generate single email
 - generate bulk emails
 - generate customer summary/strategy
+
+### MCP integration in runtime
+
+For `/generate-email/`, `/generate-email/bulk/`, and `/customers/{id}/summary`:
+
+1. backend requests customer data through MCP tool `fetch_customer_data`
+2. MCP response is used for generation/summary
+3. if MCP fails, backend falls back to direct Pandas `get_customer(...)`
 
 ### Utility endpoints
 
@@ -666,9 +683,9 @@ For security. Secrets should always come from environment variables.
 
 Yes, in `DEMO_MODE=true` for generation/summary logic.
 
-### Is MCP mandatory?
+### Are we using MCP in actual runtime?
 
-No. Main generation flow is backend + Pandas + LLM service without MCP dependency.
+Yes. Core AI routes use MCP-first customer fetch, with direct Pandas fallback for resilience.
 
 ---
 

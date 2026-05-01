@@ -9,6 +9,7 @@ from services.customer_service import (
     search_customers, get_categories,
     list_segments, get_customers_by_segment,
 )
+from services.mcp_client import fetch_customer_via_mcp
 from dotenv import load_dotenv
 from pathlib import Path
 import json, os
@@ -48,6 +49,17 @@ class SendEmailRequest(BaseModel):
     drafts: List[EmailDraftItem]
 
 
+def _get_customer_runtime(customer_id: Any) -> Optional[dict]:
+    """
+    Runtime customer fetch path: MCP first, direct Pandas fallback.
+    This keeps the app stable even if MCP server is temporarily unavailable.
+    """
+    mcp_result = fetch_customer_via_mcp(customer_id)
+    if isinstance(mcp_result, dict) and not mcp_result.get("error"):
+        return mcp_result
+    return get_customer(customer_id)
+
+
 # ── Core ──────────────────────────────────────────────────────────────────────
 
 @app.get("/")
@@ -60,7 +72,7 @@ def home():
 
 @app.post("/generate-email/")
 def create_email(req: EmailRequest):
-    customer = get_customer(req.customer_id)
+    customer = _get_customer_runtime(req.customer_id)
     if not customer:
         raise HTTPException(status_code=404, detail=f"Customer {req.customer_id} not found")
     try:
@@ -77,7 +89,7 @@ def create_email(req: EmailRequest):
 def create_bulk_emails(req: BulkEmailRequest):
     drafts = []
     for cid in req.customer_ids:
-        customer = get_customer(cid)
+        customer = _get_customer_runtime(cid)
         try:
             email = generate_email(cid, req.email_type, req.tone, customer=customer or {})
             drafts.append({
@@ -154,7 +166,7 @@ def send_emails(req: SendEmailRequest):
 
 @app.get("/customers/{customer_id}/summary")
 def customer_summary(customer_id: str):
-    customer = get_customer(customer_id)
+    customer = _get_customer_runtime(customer_id)
     if not customer:
         raise HTTPException(status_code=404, detail="Customer not found")
     summary = generate_customer_summary(customer_id, customer=customer)

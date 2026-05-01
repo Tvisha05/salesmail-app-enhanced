@@ -77,13 +77,16 @@ def _drop_internal(df: pd.DataFrame) -> pd.DataFrame:
 # ── Public read API ──────────────────────────────────────────────────────────
 
 def list_customers() -> List[Dict[str, Any]]:
-    df = _read_dataframe()
+    df = _get_segments_df(_read_dataframe())
+    if df.empty:
+        return []
+    df = _drop_internal(df)
     return df.sort_values(by="customer_id").to_dict(orient="records")
 
 
 def get_customer(customer_id: Any) -> Optional[Dict[str, Any]]:
     """Accept both string (C241288) and integer IDs."""
-    df = _read_dataframe()
+    df = _drop_internal(_get_segments_df(_read_dataframe()))
     if "customer_id" not in df.columns:
         return None
     cid = str(customer_id)

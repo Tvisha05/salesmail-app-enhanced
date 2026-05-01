@@ -106,6 +106,26 @@ function App() {
     setSuggestedTone(tone)
   }
 
+  const handleBulkSelect = (ids) => {
+    setBulkSelectedIds(ids)
+
+    if (ids.length === 1) {
+      const onlyId = String(ids[0])
+      const match = customers.find(c => String(c.customer_id) === onlyId)
+      if (match) {
+        setSelectedCustomer(match)
+        setGeneratedEmail('')
+        setSuggestedType(null)
+        setSuggestedTone(null)
+      }
+      return
+    }
+
+    if (ids.length === 0) {
+      setGeneratedEmail('')
+    }
+  }
+
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-8 md:py-8">
@@ -163,7 +183,7 @@ function App() {
               selectedCustomerId={selectedCustomer?.customer_id}
               onSelect={handleSelectCustomer}
               loading={loadingCustomers}
-              onBulkSelect={setBulkSelectedIds}
+              onBulkSelect={handleBulkSelect}
             />
             {/* Customer intelligence panel — only when a customer is selected */}
             <CustomerSummary

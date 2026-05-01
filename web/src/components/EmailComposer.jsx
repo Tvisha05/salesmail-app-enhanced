@@ -39,12 +39,12 @@ function EmailComposer({ customer, bulkSelectedIds = [], onGenerate, email, load
   const [singleSendStatus, setSingleSendStatus] = useState('') // '', 'sending', 'success', 'error'
   const [singleSendMsg, setSingleSendMsg] = useState('')
 
-  const isBulkMode = bulkSelectedIds.length > 0
+  const isBulkMode = bulkSelectedIds.length > 1
 
   // Single mode: need a customer selected
   const canGenerateSingle = Boolean(customer?.customer_id) && !loading && !bulkLoading
-  // Bulk mode: need at least one ID selected
-  const canGenerateBulk = bulkSelectedIds.length > 0 && !loading && !bulkLoading
+  // Bulk mode: need at least two IDs selected
+  const canGenerateBulk = bulkSelectedIds.length > 1 && !loading && !bulkLoading
 
   const handleSingleGenerate = () => {
     if (!customer) return
