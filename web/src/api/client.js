@@ -1,4 +1,7 @@
-const API_BASE = '/api'
+const rawApiBaseUrl = import.meta.env.VITE_API_BASE_URL?.trim()
+const API_BASE = rawApiBaseUrl
+  ? rawApiBaseUrl.replace(/\/$/, '') + '/api'
+  : '/api'
 
 async function handleResponse(res) {
   const body = await res.json().catch(() => ({}))

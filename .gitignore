@@ -35,3 +35,4 @@ web/dist/
 # Editor/IDE
 .vscode/
 .idea/
+.vercel
