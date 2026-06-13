@@ -17,6 +17,20 @@ import json, os
 load_dotenv()
 
 app = FastAPI(title="SalesMail AI Pro")
+
+# ── CORS Configuration ────────────────────────────────────────────────────────
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://salesmail-app-enhanced-1.onrender.com",
+        "http://localhost:5173",
+        "http://localhost:3000",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 ENV_FILE = Path(".env")
 
 EMAIL_TYPES = Literal["upsell", "follow-up", "cold outreach", "promotion", "re-engagement", "thank-you"]
