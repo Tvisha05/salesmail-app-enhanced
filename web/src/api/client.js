@@ -1,6 +1,6 @@
 const rawApiBaseUrl = import.meta.env.VITE_API_BASE_URL?.trim()
 const API_BASE = rawApiBaseUrl
-  ? rawApiBaseUrl.replace(/\/$/, '') + '/api'
+  ? rawApiBaseUrl.replace(/\/$/, '')
   : '/api'
 
 async function handleResponse(res) {
